@@ -42,7 +42,7 @@ jobs:
 
     - name: Create Release
       run: |
-        await github.rest.repos.createRelease({
+        github.rest.repos.createRelease({
           owner: context.repo.owner,
           repo: context.repo.repo,
           tag_name: "v${{ steps.program_version.outputs.version }}",
